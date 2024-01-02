@@ -1,0 +1,185 @@
+@import url("body.css");
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.left{
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.right{
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .inp{
+    width: 85%;
+    height: 10%;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 5px;
+    color: var(--fontColor);
+    background-color: var(--darkColor);
+}
+
+.right textarea{
+    width: 85%;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 5px;
+    resize: none;
+    color: var(--fontColor);
+    margin-bottom: 3%;
+    background-color: var(--darkColor);
+}
+
+
+i{
+    margin: 5px;
+}
+
+.container h1{
+    font-size: 3.0em;
+    cursor: pointer;
+}
+
+.fa-brands{
+    /* font-size: 1.7em; */
+    margin-top: 20%;
+    cursor: pointer;
+    /* transition: color 0.2s; */
+    position:relative;
+    color: var(--fontColor);
+}
+
+.fa-brands:hover{
+    color: var(--bgColor);
+}
+
+.fa-hashnode::after{
+    font-size: 0.4em;
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: -30px;
+    letter-spacing: 2px;
+}
+
+.fa-hashnode:hover::after{
+    content: 'Hashnode';
+}
+
+.fa-github::after{
+    font-size: 0.4em;
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: -30px;
+    letter-spacing: 2px;
+}
+
+.fa-github:hover::after{
+    content: 'Github';
+}
+
+.fa-x-twitter::after{
+    font-size: 0.4em;
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: -30px;
+    letter-spacing: 2px;
+}
+
+.fa-x-twitter:hover::after{
+    content: 'Twitter';
+}
+
+.fa-linkedin::after{
+    font-size: 0.4em;
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: -30px;
+    letter-spacing: 2px;
+}
+
+.fa-linkedin:hover::after{
+    content: 'Linkedin';
+}
+
+.container .right button, .left #a1{
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: var(--bgColor);
+    color: black;
+    border-radius: 5px;
+    border: 3px solid var(--bgColor);
+    transition: background-color 300ms ease-in-out;
+    padding: 8px 14px 8px 14px;
+    text-align: center;
+}
+
+.container .right button:hover, .left #a1:hover{
+    background-color: var(--darkColor);
+    border: 3px solid var(--bgColor);
+    color: var(--fontColor);
+    cursor: pointer;
+}
+
+.left a{
+    margin-top: 40px;
+}
+
+.container .left .icons a{
+    text-decoration: none;
+}
+
+@media screen and (max-width:768px){
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin: 2%;
+    }
+
+    .container .left{
+        width: 85%;
+        height: auto;
+        margin: 5%;
+    }
+    .container .right{
+        width: 85%;
+        height: auto;
+        margin: 5%;
+    }
+
+    .container .left h1{
+        font-size: 2.0em;
+    }
+
+    .container .left h3{
+        font-size: 1.0em;
+    }
+
+    .right button{
+        margin-bottom: 40px;
+    }
+}

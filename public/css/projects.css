@@ -1,0 +1,104 @@
+@import url("body.css");
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 2% 1%;
+    box-sizing: border-box;
+    padding: 2% 2% 0 2%;
+    cursor: pointer;
+    height: 85%;
+    justify-content: center;
+}
+
+.cards img{
+    width: 333px;
+    height: 250px;
+    border-radius: 5px;
+    margin: 5% 0;
+}
+
+.cards .text{
+    padding: 1%;
+    height: 170px;
+    width: 333px;
+    margin-top: 3%;
+}
+
+.cards:hover {
+    background-color: var(--darkColor);
+}
+
+.cards a{
+    width: 40%;
+    height: 100%;
+    margin: 24% 10px;
+    border-radius: 5px;
+    color: black;
+    border: 3px solid var(--bgColor);
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 1%;
+    /* box-sizing: ; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgColor);
+}
+
+.cards a:hover{
+    background-color: var(--hover);
+}
+
+.text h2 {
+    position: relative;
+    width: max-content;
+}
+
+.text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 15px;
+    background-color: var(--bgColor);
+    margin-bottom: 3%;
+}
+
+
+@media screen and (max-width: 1025px) {
+    .container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+    
+    .cards img{
+        width: 300px;
+    }
+
+    .cards .text{
+        width: 300px;
+    }
+}

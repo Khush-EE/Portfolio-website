@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/logoIco.ico">
+    <title>Khushee Shrivastav - Developer</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="js/body.js"></script>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs", {c1: "focus", c2: "", c3: "", c4: "",
+    c5: ""}) %>
+    <div class="container">
+      <div class="text">
+        <h3>Hello there! My Name Is</h3>
+        <h1 class="name"><span>K</span>hushee <span>S</span>hrivastav</h1>
+        <div style="font-size: 1.3em;">And I am a <span id="type"></span><span class=".typed-cursor"></span></div>
+        <p>
+          Hello! I'm Khushi, a seasoned web developer blending technical expertise with creative finesse. I specialize in crafting seamless web solutions.From captivating front-end design to robust back-end functionality, I bring a holistic approach to every project. Proficient in HTML, CSS, JavaScript, and Python, I ensure your digital presence is not just functional but captivating.
+        </p>
+        <div class="btn">
+          <a class="download" href="portfolioCV.pdf" download="KhusheeResume"
+            >Download CV</a
+          >
+          <a class="download" href="/about">Know Me</a>
+        </div>
+      </div>
+      <img src="images/frontImage.jpg" />
+    </div>
+  </body>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+
+    let elem = document.getElementById("type");
+
+    let typeObj = new Typed(elem, {
+      strings: ['<span>W</span>eb <span>D</span>eveloper',
+      '<span>D</span>esigner',
+      '<span>P</span>rogrammer'],
+      typespeed: 100,
+      loop: true,
+      backspeed: 60
+    });
+  </script>
+</html>

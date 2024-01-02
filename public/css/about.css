@@ -1,0 +1,134 @@
+@import url("body.css");
+/* 
+
+body .abt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    color: var(--bgColor);
+}
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        height: auto;
+        width: 100%;
+    }
+    p{
+        width: 90%;
+        padding: 2%;
+    }
+} */
+
+body .abt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    align-self: center;
+}
+
+body .abt::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--bgColor);
+    position: relative;
+    border-radius: 20px;
+}
+
+span{
+    color: var(--bgColor);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80vw;
+    height: 100vh;
+}
+
+.container .leftSide {
+    width: 70%;
+    padding: 1%;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+
+.container .rightSide {
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.container .rightSide ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container .rightSide ul li {
+    margin: 1% 2%;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container .rightSide ul .active::after{
+    width: 100%;
+}
+
+.container .rightSide ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: var(--bgColor);
+    height: 3px;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.container .rightSide ul li:hover::after {
+    width: 100%;
+}
+
+.text {
+    margin-top: 3%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1025px){
+    .container {
+        width: 95vw;
+    }
+
+    .container .leftSide {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .container .rightSide {
+        width: 90%;
+    }
+}

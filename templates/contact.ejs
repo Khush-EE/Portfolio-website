@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/logoIco.ico">
+    <title>Khushee Shrivastav - Developer</title>
+    <link rel="stylesheet" href="css/contact.css" />
+    <script src="js/body.js"></script>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs", {c1: "", c2: "", c3: "focus", c4: "",
+    c5: ""}) %>
+    <div class="container">
+      <div class="left">
+        <h1>
+          <i
+            class="fa-solid fa-paper-plane"
+            style="color: var(--bgColor)"
+          ></i
+          >Contact Me
+        </h1>
+        <h3>
+          <i class="fa-solid fa-envelope" style="color: var(--bgColor)"></i
+          >khushishrivas01@gmail.com
+        </h3>
+        <div class="icons" style="cursor: pointer">
+
+          <a href="https://github.com/Khush-EE" target="_blank"
+            ><i class="fa-brands fa-github fa-2xl"></i></a>
+
+          <a
+            href="https://twitter.com/KhushiS33451623"
+            target="_blank"
+            ><i class="fa-brands fa-x-twitter fa-2xl"></i
+          ></a>
+
+          <a
+          href="https://khushishrivastav.hashnode.dev"
+          target="_blank"
+          ><i class="fa-brands fa-hashnode fa-2xl"></i
+        ></a>
+
+          <a
+            href="https://www.linkedin.com/in/khushi-shrivastav-b82a42212/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin fa-2xl"></i
+          ></a>
+        </div>
+        <a href="portfolioCV.pdf" download="KhusheeResume" id="a1"
+          >Download CV<i
+            class="fa-solid fa-download"
+            style="color: black; background-color: inherit"
+          ></i
+        ></a>
+      </div>
+      <div class="right">
+        <form action="https://getform.io/f/920a0b73-3761-41c3-811f-61841e7ff8d1" method="post">
+          <input type="text" class="inp" placeholder="Your Name" name="Name"/>
+          <input type="text" class="inp" placeholder="Your Email" name="Email"/>
+          <textarea
+            name="Message"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message..."
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/25137dc536.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

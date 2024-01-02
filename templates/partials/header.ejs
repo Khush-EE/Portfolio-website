@@ -1,0 +1,44 @@
+<link rel="stylesheet" href= "css/header2.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="images/logoIco.ico" type="image/x-icon">
+
+<script src="js/header.js"></script>
+<script src="js/body.js"></script>
+
+<header>
+    <div class="img">
+        <img src="images/logo.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li class=<%=c1%>><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
+            <li class=<%=c2%>><i class="fa-solid fa-circle-user"></i><a href="/about">About</a></li>
+            <li class=<%=c3%>><i class="fa-solid fa-message"></i><a href="/contact">Contact</a></li>
+            <li class=<%=c4%>><i class="fa-solid fa-code"></i><a href="/skills">Skills</a></li>
+            <li class=<%=c5%>><i class="fa-solid fa-list"></i><a href="/projects">Projects</a></li>
+        </ul>
+    </nav>
+    <button onclick="showNav()"><i class="fa-solid fa-bars"></i></button>
+    <div class="theme">
+        <i class="fa-solid fa-sun" id="mode" onclick="toggleMode()"></i>
+        <label for="theme"><i class="fa-solid fa-palette" style="color: var(--bgColor);"></i></label><input type="color" name="" id="theme" hidden>
+    </div>
+</header>
+
+<script>
+    let picker = document.getElementById("theme");
+    picker.value = "#30D5C8"
+    picker.addEventListener("input", () => {
+        let root = document.querySelector(":root");
+        root.style.setProperty("--bgColor", picker.value);
+    });
+
+    picker.addEventListener("change", () => {
+        sessionStorage.setItem("color", picker.value);
+    });
+</script>
+
+<script src="https://kit.fontawesome.com/25137dc536.js" crossorigin="anonymous"></script>

@@ -1,0 +1,28 @@
+
+:root {
+    --fontColor: black;
+    --image: url(../images/bg.jpg);
+    --bgColor: rgb(48, 213, 200);
+    --darkColor: #575757;
+}
+/* 226, 225, 225 */
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--fontColor);
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: var(--image);
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        flex-direction: column;
+    }
+}

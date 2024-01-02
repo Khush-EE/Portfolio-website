@@ -1,0 +1,119 @@
+@import url("body.css");
+
+.container{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.text{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container img{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border: 10px solid var(--bgColor);
+    border-radius: 10px;
+    padding: 1%;
+}
+
+span{
+    color: var(--bgColor);
+}
+
+.name{
+    font-size: 3.0em;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.download{
+    width: 50%;
+    height: 100%;
+    margin-top: 20px;
+    margin: 30px 10px;
+    border-radius: 5px;
+    color: black;
+    border: 3px solid var(--bgColor);
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgColor);
+
+}
+
+.download:hover{
+    background-color: transparent;
+    color: var(--fontColor);
+}
+
+#type {
+    font-size: 1.4em;
+    color: var(--fontColor);
+    text-shadow: 0.5px 0.5px;
+    font-style: italic;
+}
+
+.typed-cursor {
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 768px) {
+    .container img{
+        display: none;
+    }
+
+    .container{
+        width: 100%;
+        height: auto;
+    }
+
+    .container .text{
+        width: 85%;
+        height: auto;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    .download{
+        font-size: 0.9em;
+        margin: 20px 10px;
+    }
+
+    #type {
+        font-size: 0.9em;
+    }
+
+    .name {
+        font-size: 1.5em;
+    }
+    .typed-cursor {
+        font-size: 0.9em;
+    }
+}

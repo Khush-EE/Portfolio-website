@@ -1,0 +1,169 @@
+@import url("body.css");
+
+:root {
+    --text0 : 'HTML (HyperText Markup Language) is the code that is used to structure a web page and its content.';
+
+    --text1 : 'CSS is the acronym of “Cascading Style Sheets”. CSS is a computer language for laying out and structuring web pages (HTML or XML).';
+
+    --text2 : 'JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed, etc.';
+
+    --text3 : 'Flutter is an open source framework developed and supported by Google. Frontend and full-stack developers use Flutter to build an application.';
+
+    --text4 : 'Python has become a staple in data science, allowing data analysts and other professionals to use the language to conduct complex statistical calculations and many other stuffs.';
+
+    --text5 : 'C is an imperative procedural language, supporting structured programming, lexical variable scope, and recursion, with a static type system. ';
+
+    --text6 : 'Canva makes designing beautiful creative assets easy for everyone. From social media images, videos and gifs to posters, websites, booklets, multimedia presentations, and heaps more.';
+
+    --text7 : 'MongoDB is built on a scale-out architecture that has become popular with developers of all kinds for developing scalable applications with evolving data schemas.';
+
+    --text8 : 'Node allows developers to write JavaScript code that runs directly in a computer process itself instead of in a browser.';
+
+}
+
+
+.container{
+    width: 65%;
+    /* height: 85%; */
+    margin: auto;
+    /* border: 2px solid gray; */
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skill{
+    border: 2px solid gray;
+    margin: 4%;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--darkColor);
+    /* justify-content: ; */
+}
+
+.skill:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.skill div {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.skill div::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bgColor);
+    bottom: 0;
+    left: 0;
+}
+
+.skill img{
+    width: 50%;
+    height: auto;
+}
+
+.skill::after{
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    padding: 2%;
+    border-radius: 5px;
+    transition: height 0.2s;
+    height: 0%;
+    overflow: hidden;
+}
+
+#sk1:hover::after{
+    content: var(--text0);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+#sk2:hover::after{
+    content: var(--text1);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+#sk3:hover::after{
+    content: var(--text2);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+#sk4:hover::after{
+    content: var(--text3);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+#sk5:hover::after{
+    content: var(--text4);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+#sk6:hover::after{
+    content: var(--text5);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+#sk7:hover::after{
+    content: var(--text6);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+#sk8:hover::after{
+    content: var(--text7);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+#sk9:hover::after{
+    content: var(--text8);
+    width: 100%;
+    height: 97%;
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.5) ,rgba(48, 213, 200, 0.5));
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        /* overflow: hidden; */
+    }
+
+    .skill{
+        width: 85%;
+        height: auto;
+    }
+
+    .skill div{
+        font-size: 2em;
+        font-weight: 500;
+    }
+}
+

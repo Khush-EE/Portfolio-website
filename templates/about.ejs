@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/logoIco.ico">
+    <title>Khushee Shrivastav - Developer</title>
+    <link rel="stylesheet" href="css/about.css">
+    <script src="js/body.js"></script>
+</head>
+<body>
+    <%- include("./partials/header.ejs", {c1: "", c2: "focus", c3: "", c4: "", c5: ""}) %>
+    <div class="container">
+      <h1 class="abt"><div><span>A</span>bout Me</div></h1>
+         <div class="leftSide">Greetings! I'm Khushi, a meticulous web developer with a passion for transforming ideas into seamless digital experiences. In the intricate tapestry of code, I navigate with precision, blending creativity and functionality to craft bespoke web solutions.<br><br>Let's embark on a journey of digital transformation together. Whether you have a specific project in mind or are looking to explore the possibilities, I am here to turn your digital aspirations into reality.</div>
+         <div class="rightSide">
+            <ul>
+               <li class="active">Technical Expertise</li>
+               <li>Design Aesthetics</li>
+               <li>Why Work With Me?</li>
+            </ul>
+            <div class="text">With a robust foundation in HTML, CSS, and JavaScript, I orchestrate elegant and responsive interfaces. My expertise extends to harnessing the power of frameworks such as React.js and Node.js, ensuring that your digital presence is not just contemporary but ahead of the curve.</div>
+         </div>
+    </div>
+</body>
+
+<script>
+   let li = document.getElementsByTagName("li");
+   let text = document.getElementsByClassName("text");
+   for(let elem of li) {
+      elem.addEventListener("click", (e) => {
+         for(let elem of li) {
+            if(elem.classList.contains("active")) {
+               elem.classList.remove("active");
+            }
+         }
+         elem.classList.add("active");
+
+         if(elem.innerText == "Technical Expertise") {
+            text[0].innerText = "With a robust foundation in HTML, CSS, and JavaScript, I orchestrate elegant and responsive interfaces. My expertise extends to harnessing the power of frameworks such as React.js and Node.js, ensuring that your digital presence is not just contemporary but ahead of the curve."
+         }
+
+         else if(elem.innerText == "Design Aesthetics") {
+            text[0].innerText = "Beyond the lines of code lies a deep passion for design aesthetics. Each project is a canvas where user experience meets visual finesse. My goal is to strike the perfect balance between sleek design and intuitive functionality, ensuring that your audience not only engages but also enjoys the online experience you provide."
+         }
+
+         else if(elem.innerText == "Why Work With Me?"){
+            text[0].innerHTML = `1. *<b>Passion for Perfection</b>*
+   I am driven by a passion for crafting top-notch websites that stand out. Every line of code, every design element is thoughtfully considered to ensure excellence.<br><br>
+
+2. *<b>Innovation at Core</b>*
+   Embracing new technologies and trends is my way of staying at the forefront of the digital landscape. Your project will benefit from innovative solutions that keep it not just up-to-date but ahead of the curve.<br><br>
+
+3. *<b>Collaborative Spirit</b>*
+   I believe in open communication and collaboration to bring your vision to life effectively. Your input is valued throughout the development process, ensuring that the end result aligns seamlessly with your goals.<br><br>
+
+4. *<b>Problem Solver</b>*
+   Challenges are opportunities in disguise. I thrive on solving complex problems and turning them into victories. Your project will be in the hands of a developer who sees obstacles as a chance to innovate and improve.<br><br>
+`
+         }
+      })
+   }
+</script>
+
+</html>
