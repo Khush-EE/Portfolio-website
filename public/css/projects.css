@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    width: 30%;
     margin: 2% 1%;
     box-sizing: border-box;
     padding: 2% 2% 0 2%;
@@ -25,16 +26,16 @@
 }
 
 .cards img{
-    width: 333px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     margin: 5% 0;
 }
 
 .cards .text{
     padding: 1%;
-    height: 170px;
-    width: 333px;
+    height: 50%;
+    width: 100%;
     margin-top: 3%;
 }
 
@@ -43,17 +44,14 @@
 }
 
 .cards a{
-    width: 40%;
-    height: 100%;
-    margin: 24% 10px;
+    margin: 0 10px;
     border-radius: 5px;
     color: black;
     border: 3px solid var(--bgColor);
     transition: 0.3s;
     text-decoration: none;
     font-size: 1.2em;
-    padding: 1%;
-    /* box-sizing: ; */
+    padding: 2%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,5 +98,10 @@
 
     .cards .text{
         width: 300px;
+    }
+
+    .cards a {
+        width: max-content;
+        margin-top: 10px;
     }
 }
